@@ -1,0 +1,11 @@
+$(document).ready(function(){
+    $("#pn").keydown(function(e) {
+        var key = e.which;
+	if ( ((key > 47) && (key < 58)) || key == 8) {
+	    var string = document.getElementById("pane").innerHTML;
+	    string += "  " + e.which;
+	    document.getElementById("pane").innerHTML = string;
+	}
+    })
+})
+

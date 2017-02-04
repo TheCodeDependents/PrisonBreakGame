@@ -1,0 +1,11 @@
+body {
+	background: orange;
+}
+
+#brd {
+	position: absolute;
+	background: yellow;
+	left: 20px;
+	top: 20px;
+	border: 1px solid grey;
+}
