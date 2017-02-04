@@ -3,14 +3,14 @@
 <head>
 	<meta charset="UTF-8"/>
 	<html lang="en">
-	<title>JS Blasting Zone</title>
+	<title>Prison Break!</title>
 	<link rel="stylesheet" href="css/style.css"><!--css/-->
 	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>
 </head>
 <body>
 	<div id="brd-div">
-	<canvas id="brd" height="2400" width="2400">Your current browser does not support Canvas! Use Firefox or Google Chrome.</canvas>
+	<canvas id="brd" height="2400" width="2400"></canvas>
 	</div>
 
 	<script type="text/javascript" src="js/events.js"></script>
