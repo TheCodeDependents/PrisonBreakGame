@@ -29,17 +29,19 @@ drawBoard = function () {
 };
 
 drawRoom = function(theRoom) {
+
 	var elem = document.getElementById('brd');
 	var cv = elem.getContext('2d');
-	cv.strokeStyle = "#000000";
-	cv.lineWidth = 4.0;
+	cv.strokeStyle = theRoom[0];
+	cv.lineWidth = 6.0;
+	cv.beginPath();
 
-	for (var i in theRoom) {
-		if (theRoom[i]) {
-			alert(theRoom[i].x + "     " + theRoom[i].y);
-			cv.moveTo(theRoom[i].x*80, theRoom[i].y*80);
-			cv.lineTo(theRoom[i+1].x*80, theRoom[i+1].y*80);
+	for(i = 0; i < theRoom[1].length; i++) {
+		if (theRoom[1][i+1] != null) {
+			cv.moveTo(theRoom[1][i].x*80, theRoom[1][i].y*80);
+			cv.lineTo(theRoom[1][i+1].x*80, theRoom[1][i+1].y*80);
 			cv.closePath();	
+			cv.stroke();
 		}
 	}
 }
@@ -47,7 +49,16 @@ drawRoom = function(theRoom) {
 drawBoard();
 
 theRooms = Array();
-theRooms[0] = [{x: 3, y: 0}, {x: 3, y: 4}, {x: 9, y: 4}, {x: 9, y: 6}, {x: 11, y: 6}, {x: 11, y:0}];
-drawRoom(theRooms[0]);
+theRooms.push(["#FF0000", [ {x: 0, y: 5}, {x: 6, y: 5}, {x: 6, y: 0} ]]);
+theRooms.push(["#00FF00", [ {x: 26, y: 0}, {x: 26, y: 5}, {x: 28, y: 5}, {x: 28, y: 7}, {x: 30, y: 7} ]]);
+theRooms.push(["#0000FF", [ {x: 0, y: 26}, {x: 5, y: 26}, {x: 5, y: 28}, {x: 7, y: 28}, {x: 7, y: 30} ]]);
+theRooms.push(["#FF00FF", [ {x: 30, y: 25}, {x: 24, y: 25}, {x: 24, y: 30} ]]);
+theRooms.push(["#000000", [ {x: 12, y: 12}, {x: 18, y: 12}, {x: 18, y: 18}, {x: 12, y: 18}, {x: 12, y: 12} ]]);
+//theRooms.push(["#0F0F0F", [{x: 3, y: 0}, {x: 3, y: 4}, {x: 9, y: 4}, {x: 9, y: 6}, {x: 11, y: 6}, {x: 11, y:0}]]);
+//theRooms.push(["#FF0000", [{x: 3, y: 0}, {x: 3, y: 4}, {x: 9, y: 4}, {x: 9, y: 6}, {x: 11, y: 6}, {x: 11, y:0}]]);
+//theRooms.push(["#FF0000", [{x: 3, y: 0}, {x: 3, y: 4}, {x: 9, y: 4}, {x: 9, y: 6}, {x: 11, y: 6}, {x: 11, y:0}]]);
+
+for (r in theRooms) drawRoom(theRooms[r]);
+
 
 
