@@ -1,11 +1,50 @@
 body {
 	background: orange;
+	width: 2500px;
+	height: 2500px;
 }
 
 #brd {
 	position: absolute;
 	background: yellow;
-	left: 20px;
-	top: 20px;
+	margin: 50px;
 	border: 1px solid grey;
+}
+
+#dice-display {
+	position: fixed;
+	background: green;
+	opacity: .5;
+	height: 25%;
+	width: 25%;
+	top: 0px;
+	right: 0px;
+	border: 1px solid black;
+	border-radius: 0px 0px 0px 100px;
+	z-index: 150;
+}
+
+#dice-span {
+	position: absolute;
+	background: white;
+	height: 70%;
+	margin-top: 15%;
+	z-index: 151;
+}
+
+.die {
+	display: block;
+	height: 40px;
+	width: 40px;
+	z-index: 200;
+}
+
+#d1 {
+	position: absolute;
+	left: 90px;
+}
+
+#d2 {
+	position: absolute;
+	left: 190px;
 }

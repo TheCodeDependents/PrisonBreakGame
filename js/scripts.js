@@ -73,7 +73,7 @@ drawRoom = function(theRoom, strokeWidth) {
         }
     }
 }
-
+/*
 defineInteriorSpaces = function(theRoom) {
     // order coordinates by y-value
     for (var i = 1; i < theRoom[1].length; i++)
@@ -86,7 +86,7 @@ defineInteriorSpaces = function(theRoom) {
 
 
 
-}
+}*/
 
 
 pulse = function(tR) {
